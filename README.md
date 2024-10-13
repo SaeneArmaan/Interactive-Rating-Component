@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/SaeneArmaan/Interactive-Rating-Component)
-- Live Site URL: [Live URL](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://interactive-rating-component-saene.netlify.app/)
 
 ### Built with
 
