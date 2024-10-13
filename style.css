@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Light-Blue: hsl(213, 19%, 25%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+html {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  font-style: italic;
+  shape-margin: 1rem;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.selected {
+  color: var(--Dark-Blue) !important;
+  background-color: var(--Orange) !important;
+}
+
+.toast {
+  padding: 10px;
+  font-size: 0.8rem;
+  border-radius: 25px;
+  color: var(--Very-Dark-Blue);
+  background-color: var(--Orange);
+  animation: toastAppear ease-in 1200ms,
+    toastDisappear ease-out 1200ms 3100ms forwards;
+}
+
+.contentWrapper {
+  gap: 20px;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  min-height: 100svh;
+  color: var(--White);
+  background-color: var(--Very-Dark-Blue);
+}
+
+.ratingCard {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: var(--Dark-Blue);
+  padding: 20px;
+  gap: 20px;
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+.ratingCard .iconWrapper {
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  background-color: var(--Light-Blue);
+  border-radius: 25px;
+}
+
+.headingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headingWrapper h1 {
+  font-size: 1.7rem;
+}
+
+.headingWrapper p {
+  color: var(--Light-Grey);
+}
+
+.ratingWrapper {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px;
+}
+
+.ratingWrapper li {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  background-color: var(--Light-Blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--Light-Grey);
+}
+
+.ratingWrapper li:hover {
+  cursor: pointer;
+  color: var(--Very-Dark-Blue);
+  background-color: var(--White);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--Orange);
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: "Overpass", sans-serif;
+}
+
+.submitBtn:hover {
+  color: var(--Very-Dark-Blue);
+  background-color: var(--White);
+}
+
+.submitBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.attribution a {
+  color: var(--Light-Grey);
+}
+
+.attribution a:hover {
+  font-size: 1rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  color: var(--Orange);
+}
+
+.thanksCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: var(--Dark-Blue);
+  padding: 20px;
+  gap: 20px;
+  max-width: 90%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.illWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.illWrapper > div {
+  padding: 10px 20px;
+  color: var(--Orange);
+  border-radius: 25px;
+  background-color: var(--Light-Blue);
+}
+
+.thanksCard .headingWrapper h1 {
+  align-self: center;
+}
+
+@keyframes toastAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toastDisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .ratingCard,
+  .thanksCard {
+    max-width: 340px;
+  }
+}
